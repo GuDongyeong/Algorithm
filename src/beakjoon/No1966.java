@@ -9,7 +9,6 @@ import java.util.List;
 public class No1966 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		
 		int testCase = Integer.parseInt(reader.readLine());
 		
 		for(int i=0;i<testCase;i++) {
@@ -42,7 +41,6 @@ public class No1966 {
 					}
 					
 				}
-				
 				if( flag ) {
 					cnt++;
 					if( loc == 0 ) {
@@ -50,6 +48,7 @@ public class No1966 {
 						break;
 					}else {
 						qu.remove(0);
+						loc--;
 					}
 				}
 			}
