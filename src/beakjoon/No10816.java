@@ -31,7 +31,7 @@ public class No10816 {
 		
 		Arrays.sort(card);
 		for(int k=0;k<m;k++) {
-			int res = searchR(0, n-1, number[k]) - searchL(0, n-1, number[k]);
+			int res = searchR(0, n, number[k]) - searchL(0, n, number[k]);
 			sb.append(res + " ");
 		}
 		System.out.println(sb);
@@ -46,14 +46,14 @@ public class No10816 {
 			return searchR(mid + 1, end, i);
 		}else{
 			return searchR(start, mid - 1, i);
-		}
+		} 
 		
 	}
 
 	private static int searchL(int start, int end, int i) {
 		
 		int mid = (start+end)/2;
-		if( start > end ) return mid;
+		if( start >= end ) return mid;
 		if( i <= card[mid]) {
 			return searchL(start, mid - 1, i);
 		}else {
